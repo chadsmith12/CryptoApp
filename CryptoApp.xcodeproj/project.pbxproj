@@ -24,6 +24,10 @@
 		C7CDF95F2701244B0086063D /* CoinRowLeftColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF95E2701244B0086063D /* CoinRowLeftColumn.swift */; };
 		C7CDF9612701245B0086063D /* CoinRowCenterColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF9602701245B0086063D /* CoinRowCenterColumn.swift */; };
 		C7CDF9632701246A0086063D /* CoinRowRightColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF9622701246A0086063D /* CoinRowRightColumn.swift */; };
+		C7CDF9652701298C0086063D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF9642701298C0086063D /* HomeViewModel.swift */; };
+		C7CDF96727012E150086063D /* AllCoinsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF96627012E150086063D /* AllCoinsList.swift */; };
+		C7CDF96927012EE20086063D /* PortfolioCoinsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF96827012EE20086063D /* PortfolioCoinsList.swift */; };
+		C7CDF96B270130A30086063D /* ListColumnHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF96A270130A30086063D /* ListColumnHeaders.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,10 @@
 		C7CDF95E2701244B0086063D /* CoinRowLeftColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowLeftColumn.swift; sourceTree = "<group>"; };
 		C7CDF9602701245B0086063D /* CoinRowCenterColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowCenterColumn.swift; sourceTree = "<group>"; };
 		C7CDF9622701246A0086063D /* CoinRowRightColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowRightColumn.swift; sourceTree = "<group>"; };
+		C7CDF9642701298C0086063D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C7CDF96627012E150086063D /* AllCoinsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCoinsList.swift; sourceTree = "<group>"; };
+		C7CDF96827012EE20086063D /* PortfolioCoinsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCoinsList.swift; sourceTree = "<group>"; };
+		C7CDF96A270130A30086063D /* ListColumnHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListColumnHeaders.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +144,7 @@
 		C7CDF94827002ABD0086063D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C7CDF9642701298C0086063D /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -146,6 +155,9 @@
 				C7CDF95D2701241E0086063D /* CoinRow */,
 				C7CDF94A27002CC70086063D /* HomeView.swift */,
 				C7CDF9512700367C0086063D /* HomeHeader.swift */,
+				C7CDF96627012E150086063D /* AllCoinsList.swift */,
+				C7CDF96827012EE20086063D /* PortfolioCoinsList.swift */,
+				C7CDF96A270130A30086063D /* ListColumnHeaders.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,7 +271,9 @@
 				C7CDF95F2701244B0086063D /* CoinRowLeftColumn.swift in Sources */,
 				C7CDF9562700F4E20086063D /* Coin.swift in Sources */,
 				C7CDF9612701245B0086063D /* CoinRowCenterColumn.swift in Sources */,
+				C7CDF9652701298C0086063D /* HomeViewModel.swift in Sources */,
 				C7CDF9322700119A0086063D /* ContentView.swift in Sources */,
+				C7CDF96B270130A30086063D /* ListColumnHeaders.swift in Sources */,
 				C7CDF958270110E60086063D /* CoinRowView.swift in Sources */,
 				C7CDF945270024D80086063D /* Themes.swift in Sources */,
 				C7CDF9302700119A0086063D /* CryptoAppApp.swift in Sources */,
@@ -271,6 +285,8 @@
 				C7CDF93F270021590086063D /* Color.swift in Sources */,
 				C7CDF95C270118050086063D /* Double.swift in Sources */,
 				C7CDF950270033850086063D /* CircleButtonAnimation.swift in Sources */,
+				C7CDF96727012E150086063D /* AllCoinsList.swift in Sources */,
+				C7CDF96927012EE20086063D /* PortfolioCoinsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
