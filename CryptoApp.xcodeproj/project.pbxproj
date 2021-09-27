@@ -33,6 +33,7 @@
 		C7CDF973270179E20086063D /* CoinImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF972270179E20086063D /* CoinImage.swift */; };
 		C7CDF97527017BC80086063D /* CoinImageDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF97427017BC80086063D /* CoinImageDataService.swift */; };
 		C7CDF97727017DAD0086063D /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF97627017DAD0086063D /* CoinImageViewModel.swift */; };
+		C7CDF979270189DB0086063D /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF978270189DB0086063D /* LocalFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		C7CDF972270179E20086063D /* CoinImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImage.swift; sourceTree = "<group>"; };
 		C7CDF97427017BC80086063D /* CoinImageDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageDataService.swift; sourceTree = "<group>"; };
 		C7CDF97627017DAD0086063D /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
+		C7CDF978270189DB0086063D /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				C7CDF970270172500086063D /* NetworkingManager.swift */,
+				C7CDF978270189DB0086063D /* LocalFileManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				C7CDF95C270118050086063D /* Double.swift in Sources */,
 				C7CDF950270033850086063D /* CircleButtonAnimation.swift in Sources */,
 				C7CDF97527017BC80086063D /* CoinImageDataService.swift in Sources */,
+				C7CDF979270189DB0086063D /* LocalFileManager.swift in Sources */,
 				C7CDF96727012E150086063D /* AllCoinsList.swift in Sources */,
 				C7CDF96927012EE20086063D /* PortfolioCoinsList.swift in Sources */,
 			);
