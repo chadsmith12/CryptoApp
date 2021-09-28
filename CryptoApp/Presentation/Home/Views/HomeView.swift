@@ -18,6 +18,7 @@ struct HomeView: View {
             
             VStack {
                 HomeHeader(showPortfolio: $showPortfolio)
+                SearchBarView(searchText: $vm.searchText)
                 ListColumnHeaders(showPortfolio: showPortfolio)
                 .font(.caption)
                 .foregroundColor(.theme.secondaryText)
