@@ -10,14 +10,18 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject private var vm: HomeViewModel
     @State private var showPortfolio = false
+    @State private var showPortfolioView = false
     
     var body: some View {
         ZStack {
             Color.theme.background
                 .ignoresSafeArea()
+                .sheet(isPresented: $showPortfolioView) {
+                    PortfolioView()
+                }
             
             VStack {
-                HomeHeader(showPortfolio: $showPortfolio)
+                HomeHeader(showPortfolio: $showPortfolio, showPortfolioView: $showPortfolioView)
                 HomeStatsView(showPortfolio: $showPortfolio)
                 SearchBarView(searchText: $vm.searchText)
                 ListColumnHeaders(showPortfolio: showPortfolio)
