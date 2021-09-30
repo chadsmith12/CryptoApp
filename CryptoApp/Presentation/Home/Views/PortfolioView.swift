@@ -19,7 +19,7 @@ struct PortfolioView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
                     SearchBarView(searchText: $homeVm.searchText)
-                    CoinLogoList(selectedCoin: $selectedCoin)
+                    CoinLogoList(selectedCoin: $selectedCoin, quantityText: $quantityText)
                     
                     if selectedCoin != nil {
                         VStack(spacing: 20) {
@@ -71,6 +71,9 @@ struct PortfolioView: View {
                     .font(.headline)
                 }
             }
+            .onTapGesture {
+                UIApplication.shared.endEditing()
+            }
         }
     }
 }
@@ -92,11 +95,16 @@ extension PortfolioView {
     }
     
     private func saveButtonPress() {
-        guard let coin = selectedCoin else {
+        guard
+            let coin = selectedCoin,
+            let amount = Double(quantityText)
+        else {
             return
         }
         
         // save to portfolio here
+        homeVm.updatePortfolio(coin: coin, amount: amount)
+        
         withAnimation(.easeIn) {
             showCheckMark = true
             removeSelectedCoin()

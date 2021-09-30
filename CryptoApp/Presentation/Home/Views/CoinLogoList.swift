@@ -9,15 +9,16 @@ import SwiftUI
 
 struct CoinLogoList: View {
     @Binding var selectedCoin: Coin?
+    @Binding var quantityText: String
     @EnvironmentObject var homeVm: HomeViewModel
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: 10) {
-                ForEach(homeVm.allCoins) { coin in
+                ForEach(homeVm.searchText.isEmpty ? homeVm.portfolioCoins : homeVm.allCoins) { coin in
                     Button(action: {
                         withAnimation(.easeIn) {
-                            self.selectedCoin = coin
+                            self.updateSelectedCoin(coin: coin)
                         }
                     }) {
                         CoinLogoView(coin: coin)
@@ -34,11 +35,21 @@ struct CoinLogoList: View {
             .padding(.leading)
         }
     }
+    
+    private func updateSelectedCoin(coin: Coin) {
+        selectedCoin = coin
+        if let portfolioCoin = homeVm.portfolioCoins.first(where: {$0.id == coin.id}),
+           let amount = portfolioCoin.currentHoldings {
+            quantityText = "\(amount)"
+        } else {
+            quantityText = ""
+        }
+    }
 }
 
 struct CoinLogoList_Previews: PreviewProvider {
     static var previews: some View {
-        CoinLogoList(selectedCoin: .constant(dev.coin))
+        CoinLogoList(selectedCoin: .constant(dev.coin), quantityText: .constant(""))
             .environmentObject(dev.homeVm)
     }
 }
