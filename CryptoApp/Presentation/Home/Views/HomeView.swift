@@ -40,6 +40,9 @@ struct HomeView: View {
                 Spacer(minLength: 0)
             }
         }
+        .background(
+            NavigationLink(isActive: $vm.showingDetailView, destination: {DetailView(coin: vm.selectedCoin)}, label: {EmptyView()})
+        )
     }
 }
 
