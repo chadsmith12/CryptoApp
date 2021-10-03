@@ -229,10 +229,10 @@
 		C7CDF9532700F4AA0086063D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C7CDF9A027093E990086063D /* MarketData */,
 				C7CDF991270578770086063D /* CoreData */,
 				C7CDF97E2702D6320086063D /* Statistics */,
 				C7CDF9542700F4BA0086063D /* Coins */,
-				C7CDF9852704006E0086063D /* MarketData.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -315,6 +315,14 @@
 				C7CDF99C270801FD0086063D /* DetailView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C7CDF9A027093E990086063D /* MarketData */ = {
+			isa = PBXGroup;
+			children = (
+				C7CDF9852704006E0086063D /* MarketData.swift */,
+			);
+			path = MarketData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
