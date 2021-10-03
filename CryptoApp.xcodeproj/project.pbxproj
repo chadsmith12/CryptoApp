@@ -49,6 +49,9 @@
 		C7CDF9982706C6B10086063D /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF9972706C6B10086063D /* HapticManager.swift */; };
 		C7CDF99D270801FD0086063D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF99C270801FD0086063D /* DetailView.swift */; };
 		C7CDF99F27093DE60086063D /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF99E27093DE60086063D /* Coin.swift */; };
+		C7CDF9A227093FA70086063D /* CoinDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF9A127093FA70086063D /* CoinDetail.swift */; };
+		C7CDF9A4270943310086063D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF9A3270943310086063D /* DetailViewModel.swift */; };
+		C7CDF9A6270943420086063D /* CoinDetailDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF9A5270943420086063D /* CoinDetailDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +98,9 @@
 		C7CDF9972706C6B10086063D /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		C7CDF99C270801FD0086063D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		C7CDF99E27093DE60086063D /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		C7CDF9A127093FA70086063D /* CoinDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetail.swift; sourceTree = "<group>"; };
+		C7CDF9A3270943310086063D /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		C7CDF9A5270943420086063D /* CoinDetailDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				C7CDF99E27093DE60086063D /* Coin.swift */,
+				C7CDF9A127093FA70086063D /* CoinDetail.swift */,
 			);
 			path = Coins;
 			sourceTree = "<group>";
@@ -263,6 +270,7 @@
 				C7CDF97427017BC80086063D /* CoinImageDataService.swift */,
 				C7CDF987270404940086063D /* MarketDataService.swift */,
 				C7CDF99527057A120086063D /* PortfolioDataService.swift */,
+				C7CDF9A5270943420086063D /* CoinDetailDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -305,6 +313,7 @@
 		C7CDF99A270801DA0086063D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C7CDF9A3270943310086063D /* DetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -406,6 +415,7 @@
 				C7CDF9322700119A0086063D /* ContentView.swift in Sources */,
 				C7CDF98C27040DE80086063D /* XMarkButton.swift in Sources */,
 				C7CDF96B270130A30086063D /* ListColumnHeaders.swift in Sources */,
+				C7CDF9A6270943420086063D /* CoinDetailDataService.swift in Sources */,
 				C7CDF971270172500086063D /* NetworkingManager.swift in Sources */,
 				C7CDF9982706C6B10086063D /* HapticManager.swift in Sources */,
 				C7CDF958270110E60086063D /* CoinRowView.swift in Sources */,
@@ -421,6 +431,7 @@
 				C7CDF98A27040AC30086063D /* PortfolioView.swift in Sources */,
 				C7CDF9632701246A0086063D /* CoinRowRightColumn.swift in Sources */,
 				C7CDF94B27002CC70086063D /* HomeView.swift in Sources */,
+				C7CDF9A227093FA70086063D /* CoinDetail.swift in Sources */,
 				C7CDF9522700367C0086063D /* HomeHeader.swift in Sources */,
 				C7CDF93F270021590086063D /* Color.swift in Sources */,
 				C7CDF99627057A120086063D /* PortfolioDataService.swift in Sources */,
@@ -431,6 +442,7 @@
 				C7CDF97527017BC80086063D /* CoinImageDataService.swift in Sources */,
 				C7CDF97B2702BF990086063D /* SearchBarView.swift in Sources */,
 				C7CDF979270189DB0086063D /* LocalFileManager.swift in Sources */,
+				C7CDF9A4270943310086063D /* DetailViewModel.swift in Sources */,
 				C7CDF99F27093DE60086063D /* Coin.swift in Sources */,
 				C7CDF96727012E150086063D /* AllCoinsList.swift in Sources */,
 				C7CDF96927012EE20086063D /* PortfolioCoinsList.swift in Sources */,

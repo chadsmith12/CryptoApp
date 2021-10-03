@@ -20,10 +20,15 @@ struct DetailView: View {
 }
 
 struct MainDetailView: View {
-    let coin: Coin
+    @ObservedObject var vm: DetailViewModel
+    
+    init(coin: Coin) {
+        print(coin.name)
+        self.vm = DetailViewModel(coin: coin)
+    }
         
     var body: some View {
-        Text(coin.name)
+        Text("\(vm.coinDetails?.name ?? "")")
     }
 }
 
