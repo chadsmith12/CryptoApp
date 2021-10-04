@@ -21,19 +21,58 @@ struct DetailView: View {
 
 struct MainDetailView: View {
     @ObservedObject var vm: DetailViewModel
+    private let columns: [GridItem] = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    private var spacing: CGFloat = 30
+    
     
     init(coin: Coin) {
-        print(coin.name)
         self.vm = DetailViewModel(coin: coin)
     }
         
     var body: some View {
-        Text("\(vm.coinDetails?.name ?? "")")
+        ScrollView {
+            VStack(spacing: 20) {
+                Text("")
+                    .frame(height: 250)
+                
+                Text("Overview")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.theme.accent)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Divider()
+                
+                LazyVGrid(columns: columns, alignment: .leading, spacing: spacing, pinnedViews: []) {
+                    ForEach(vm.overviewStats) { stat in
+                        StatisticView(stat: stat)
+                    }
+                }
+                
+                Text("Additional Details")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.theme.accent)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Divider()
+                LazyVGrid(columns: columns, alignment: .leading, spacing: spacing, pinnedViews: []) {
+                    ForEach(vm.additionalStats) { stat in
+                        StatisticView(stat: stat)
+                    }
+                }
+            }
+            .padding()
+        }
+        .navigationTitle(vm.coinName)
     }
 }
 
 struct MainDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MainDetailView(coin: dev.coin)
+        NavigationView {
+            MainDetailView(coin: dev.coin)
+        }
     }
 }
