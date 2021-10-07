@@ -34,38 +34,44 @@ struct MainDetailView: View {
         
     var body: some View {
         ScrollView {
-            VStack(spacing: 20) {
-                Text("")
-                    .frame(height: 250)
-                
-                Text("Overview")
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(.theme.accent)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                Divider()
-                
-                LazyVGrid(columns: columns, alignment: .leading, spacing: spacing, pinnedViews: []) {
-                    ForEach(vm.overviewStats) { stat in
-                        StatisticView(stat: stat)
+            VStack {
+                ChartView(coin: vm.coin)
+                    .padding(.vertical)
+                VStack(spacing: 20) {
+                    Text("Overview")
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(.theme.accent)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Divider()
+                    
+                    LazyVGrid(columns: columns, alignment: .leading, spacing: spacing, pinnedViews: []) {
+                        ForEach(vm.overviewStats) { stat in
+                            StatisticView(stat: stat)
+                        }
+                    }
+                    
+                    Text("Additional Details")
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(.theme.accent)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Divider()
+                    LazyVGrid(columns: columns, alignment: .leading, spacing: spacing, pinnedViews: []) {
+                        ForEach(vm.additionalStats) { stat in
+                            StatisticView(stat: stat)
+                        }
                     }
                 }
-                
-                Text("Additional Details")
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(.theme.accent)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                Divider()
-                LazyVGrid(columns: columns, alignment: .leading, spacing: spacing, pinnedViews: []) {
-                    ForEach(vm.additionalStats) { stat in
-                        StatisticView(stat: stat)
-                    }
-                }
+                .padding()
             }
-            .padding()
         }
         .navigationTitle(vm.coinName)
+        .toolbar {
+            ToolbarItem(placement: ToolbarItemPlacement.navigationBarTrailing) {
+                DetailToolbar(coin: vm.coin)
+            }
+        }
     }
 }
 
