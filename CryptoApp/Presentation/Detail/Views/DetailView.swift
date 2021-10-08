@@ -21,6 +21,8 @@ struct DetailView: View {
 
 struct MainDetailView: View {
     @ObservedObject var vm: DetailViewModel
+    @State private var showDescription = false
+    
     private let columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -44,7 +46,11 @@ struct MainDetailView: View {
                         .foregroundColor(.theme.accent)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     Divider()
-                    
+                    ZStack {
+                        if let coinDescription = vm.description, !coinDescription.isEmpty {
+                            ExpandableText(coinDescription, showFullText: $showDescription)
+                        }
+                    }
                     LazyVGrid(columns: columns, alignment: .leading, spacing: spacing, pinnedViews: []) {
                         ForEach(vm.overviewStats) { stat in
                             StatisticView(stat: stat)
@@ -62,6 +68,20 @@ struct MainDetailView: View {
                             StatisticView(stat: stat)
                         }
                     }
+                    VStack(alignment: .leading, spacing: 20) {
+                        if let website = vm.websiteUrl, let url = URL(string: website) {
+                            Link("Website", destination: url)
+                        }
+                        
+                        if let redditString = vm.redditUrl, let redditUrl = URL(string: redditString) {
+                            Link("Reddit", destination: redditUrl)
+                        }
+                    }
+                    .accentColor(.blue)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.headline)
+                    
+                    
                 }
                 .padding()
             }
