@@ -57,6 +57,7 @@
 		C7CDF9AC270EC0510086063D /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF9AB270EC0510086063D /* Date.swift */; };
 		C7CDF9AE270FF3FC0086063D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF9AD270FF3FC0086063D /* String.swift */; };
 		C7CDF9B0270FF89A0086063D /* ExpandableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF9AF270FF89A0086063D /* ExpandableText.swift */; };
+		C7CDF9B4271001BF0086063D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CDF9B3271001BF0086063D /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +112,7 @@
 		C7CDF9AB270EC0510086063D /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		C7CDF9AD270FF3FC0086063D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		C7CDF9AF270FF89A0086063D /* ExpandableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableText.swift; sourceTree = "<group>"; };
+		C7CDF9B3271001BF0086063D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 		C7CDF94627002A8B0086063D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C7CDF9B1271001990086063D /* Settings */,
 				C7CDF94C27002FAD0086063D /* Components */,
 				C7CDF94727002AA00086063D /* Home */,
 				C7CDF999270801C30086063D /* Detail */,
@@ -349,6 +352,22 @@
 			path = MarketData;
 			sourceTree = "<group>";
 		};
+		C7CDF9B1271001990086063D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C7CDF9B2271001AD0086063D /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C7CDF9B2271001AD0086063D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7CDF9B3271001BF0086063D /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -433,6 +452,7 @@
 				C7CDF96B270130A30086063D /* ListColumnHeaders.swift in Sources */,
 				C7CDF9A6270943420086063D /* CoinDetailDataService.swift in Sources */,
 				C7CDF971270172500086063D /* NetworkingManager.swift in Sources */,
+				C7CDF9B4271001BF0086063D /* SettingsView.swift in Sources */,
 				C7CDF9982706C6B10086063D /* HapticManager.swift in Sources */,
 				C7CDF958270110E60086063D /* CoinRowView.swift in Sources */,
 				C7CDF945270024D80086063D /* Themes.swift in Sources */,

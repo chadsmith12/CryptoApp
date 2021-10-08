@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeHeader: View {
     @Binding var showPortfolio: Bool
     @Binding var showPortfolioView: Bool
+    @Binding var showInfoView: Bool
     
     private var navTitle: String {
         showPortfolio ? "Portfolio" : "Live Prices"
@@ -20,6 +21,9 @@ struct HomeHeader: View {
             CircleButton(iconName: showPortfolio ? "plus" : "info") {
                 if self.showPortfolio {
                     self.showPortfolioView.toggle()
+                }
+                else {
+                    self.showInfoView.toggle()
                 }
             }
             .background(CircleButtonAnimation(animate: $showPortfolio))
@@ -44,6 +48,6 @@ struct HomeHeader: View {
 
 struct HomeHeader_Previews: PreviewProvider {
     static var previews: some View {
-        HomeHeader(showPortfolio: .constant(false), showPortfolioView: .constant(false))
+        HomeHeader(showPortfolio: .constant(false), showPortfolioView: .constant(false), showInfoView: .constant(false))
     }
 }

@@ -11,6 +11,7 @@ struct HomeView: View {
     @EnvironmentObject private var vm: HomeViewModel
     @State private var showPortfolio = false
     @State private var showPortfolioView = false
+    @State private var showInfoView = false
     
     var body: some View {
         ZStack {
@@ -21,7 +22,7 @@ struct HomeView: View {
                 }
             
             VStack {
-                HomeHeader(showPortfolio: $showPortfolio, showPortfolioView: $showPortfolioView)
+                HomeHeader(showPortfolio: $showPortfolio, showPortfolioView: $showPortfolioView, showInfoView: $showInfoView)
                 HomeStatsView(showPortfolio: $showPortfolio)
                 SearchBarView(searchText: $vm.searchText)
                 ListColumnHeaders(showPortfolio: showPortfolio)
@@ -38,6 +39,9 @@ struct HomeView: View {
                 }
                
                 Spacer(minLength: 0)
+            }
+            .sheet(isPresented: $showInfoView) {
+                SettingsView()
             }
         }
         .background(
