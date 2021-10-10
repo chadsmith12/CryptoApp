@@ -12,25 +12,30 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                Section(header: Text("CoinGecko"), content: {
-                    VStack(alignment: .leading) {
-                        Image("coingecko")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 100)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                        Text("The cryptocurrency data that this app uses comes from a free API from CoinGecko! The prices may be slightly delayed.")
-                            .font(.callout)
-                            .fontWeight(.medium)
-                            .foregroundColor(.theme.accent)
-                    }
-                    .padding(.vertical)
-                    
-                    Link("Visit CoinGecko", destination: URL(string: "https://www.coingecko.com/en")!)
-                        .accentColor(.blue)
-                })
+            ZStack {
+                Color.theme.background
+                    .ignoresSafeArea()
+                List {
+                    Section(header: Text("CoinGecko"), content: {
+                        VStack(alignment: .leading) {
+                            Image("coingecko")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 100)
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                            Text("The cryptocurrency data that this app uses comes from a free API from CoinGecko! The prices may be slightly delayed.")
+                                .font(.callout)
+                                .fontWeight(.medium)
+                                .foregroundColor(.theme.accent)
+                        }
+                        .padding(.vertical)
+                        
+                        Link("Visit CoinGecko", destination: URL(string: "https://www.coingecko.com/en")!)
+                            .accentColor(.blue)
+                    })
+                }
             }
+
             .navigationTitle("App Info")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

@@ -17,6 +17,7 @@ struct PortfolioCoinsList: View {
                     .onTapGesture {
                         navigate(coin: coin)
                     }
+                    .listRowBackground(Color.theme.background)
             }
         }
         .listStyle(PlainListStyle())
