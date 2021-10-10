@@ -9,11 +9,11 @@ Crypto Tracker is a crypto currency tracking application built in Swift UI that 
 
 ### Screenshots
 
-![Launch Screen](screenshots/launch.png?raw=true){:height="50%" width="50%"}
-![Main Screen](screenshots/all-coins.png?raw=true){:height="50%" width="50%"}
-![Portfolio Screen](screenshots/portfolio.png?raw=true){:height="50%" width="50%"}
-![Edit Portfolio Screen](screenshots/edit-portfolio.png?raw=true){:height="50%" width="50%"}
-![Detail Screen](screenshots/detail.png?raw=true){:height="50%" width="50%"}
+![Launch Screen](screenshots/launch.png?raw=true)
+![Main Screen](screenshots/all-coins.png?raw=true)
+![Portfolio Screen](screenshots/portfolio.png?raw=true)
+![Edit Portfolio Screen](screenshots/edit-portfolio.png?raw=true)
+![Detail Screen](screenshots/detail.png?raw=true)
 
 ### Architechure
 
