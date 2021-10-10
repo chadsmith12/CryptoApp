@@ -34,8 +34,19 @@ struct HomeView: View {
                         .transition(.move(edge: .leading))
                 }
                 if showPortfolio {
-                    PortfolioCoinsList()
-                        .transition(.move(edge: .trailing))
+                    ZStack(alignment: .top) {
+                        if vm.portfolioCoins.isEmpty && vm.searchText.isEmpty {
+                            Text("Portfolio is empty. Click the + button to get started")
+                                .font(.callout)
+                                .foregroundColor(.theme.accent)
+                                .fontWeight(.medium)
+                                .multilineTextAlignment(.center)
+                                .padding(50)
+                        } else {
+                            PortfolioCoinsList()
+                        }
+                    }
+                    .transition(.move(edge: .trailing))
                 }
                
                 Spacer(minLength: 0)

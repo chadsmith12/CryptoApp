@@ -146,7 +146,7 @@ class HomeViewModel : ObservableObject {
         }
             .reduce(0, +)
         
-        let percentageChanged = ((portfolioValue - previousValue) / previousValue) * 100
+        let percentageChanged = ((portfolioValue - previousValue) / previousValue)
         
         let portfolio = Statistic(title: "Portfolio Value", value: portfolioValue.asCurrencyWith2Decimal(), percentageChanged: percentageChanged)
         
