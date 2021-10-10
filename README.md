@@ -62,6 +62,10 @@ Text("Hello World")
 
 All Previews for every view work by using `PreviewProvider` and mock data that is done by extending the PreviewProvider so you can easily access mock data in the preview. Seeing the extension for the `PreviewProvider` shows how this is done.
 
+### Updates
+
+Currently this targets iOS14 so it can not use the latest new features that SwiftUI brings in iOS15, this includes the use of `async` and `await`. In the future a different branch may be created to attempt to update and use some new features in Swift and SwiftUI.
+
 ### Special Thanks
 
 This application was developed using the CoinGecko API. Special Thanks to them for the amazing free API. It can be located here: https://www.coingecko.com/en
